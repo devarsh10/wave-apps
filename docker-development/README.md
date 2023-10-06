@@ -8,7 +8,7 @@ Wave is no different from other web frameworks which means you can even reuse yo
 
 * Docker installed - <https://www.docker.com/>
 
-## Installation
+## Set-Up
 
 Linux / MacOS:
 
@@ -19,8 +19,15 @@ docker build . -t wave_local_dev
 docker run -p 10101:10101 -v $(pwd)/src:/app/src wave_local_dev:latest
 ```
 
-TODO: Windows
+Windows:
 
+```sh
+git clone https://github.com/h2oai/wave-apps.git
+cd wave-apps/docker-development
+docker build . -t wave_local_dev
+docker run -p 10101:10101 -v /c/Users/username/src:/app/src wave_local_dev:latest OR docker run -p 10101:10101 -v ./src:/app/src wave_local_dev:latest
+```
+Note: Replace username with the Username of your PC 
 ## Features
 
 Once the above steps are done, you should see the sample app at <http://localhost:10101> in your browser. What's more, any changes within the `src` directory should be picked up and reflected as well.
